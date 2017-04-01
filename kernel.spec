@@ -24,7 +24,7 @@ Summary: The Linux kernel
 %global zipsed -e 's/\.ko$/\.ko.xz/'
 %endif
 
-# define buildid .local
+%define buildid .nvmelp
 
 # baserelease defines which build revision of this kernel version we're
 # building.  We used to call this fedora_build, but the magical name
@@ -612,6 +612,9 @@ Patch857: vmwgfx-check-that-number-of-mip-levels-is-above-zero.patch
 Patch858: tcp-mark-skbs-with-SCM_TIMESTAMPING_OPT_STATS.patch
 
 # END OF PATCH DEFINITIONS
+
+Patch998: APST-1.patch
+Patch999: APST-2.patch
 
 %endif
 
